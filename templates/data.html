@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUMBAI FLOOD</title>
+	<style>
+	button {
+    background-color: #0000FF;
+    padding: 25px 22px;
+    text-color:black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+	}
+	</style>
+</head>
+<body style="background-color:#1E90FF;">
+     <div>
+		<dialog id="myFirstDialog" style="width:50%; background-color:#F4FFEF; border:1px dotted black;">
+			<p>There is {{ ny }} % chances of flood to occur this month !!! </p>
+			<button id="hide">Close</button>
+		</dialog>
+		<button class="button" id="show">Prediction Rate</button>
+	</div>
+	<script type="text/JavaScript">
+	(function() {
+    	var dialog = document.getElementById('myFirstDialog');
+    	document.getElementById('show').onclick = function() {
+        dialog.show();
+    	};
+    	document.getElementById('hide').onclick = function() {
+        	dialog.close();
+    	};
+	})();
+	</script>
+	<div>
+		<dialog id="myDialog" style="width:50%; background-color:#F4FFEF; border:1px dotted black;">
+			<p>Our data is {{ acc_h }} % accurate for prediction !!! </p>
+			<button id="hide1">Close</button>
+		</dialog>
+		<button class="button" id="show1">Accuracy rate</button>
+	</div>
+
+	<script type="text/JavaScript">
+	(function() {
+    	var dialog = document.getElementById('myDialog');
+    	document.getElementById('show1').onclick = function() {
+        dialog.show();
+    	};
+    	document.getElementById('hide1').onclick = function() {
+        	dialog.close();
+    	};
+	})();
+	</script>
+</body>
+</html>
+
